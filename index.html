@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transform your business with our proven solutions. Get results-driven strategies that convert visitors into loyal clients.">
+    <meta name="keywords" content="business growth, conversion optimization, client acquisition, digital solutions">
+    <meta name="author" content="Your Company">
+    <title>Transform Your Business | Convert Visitors to Clients</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Transform Your Business | Convert Visitors to Clients">
+    <meta property="og:description" content="Transform your business with our proven solutions. Get results-driven strategies that convert visitors into loyal clients.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 scroll-smooth">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold gradient-text">YourBrand</div>
+                <button class="md:hidden text-gray-600" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-purple-600 transition">Home</a>
+                    <a href="#problem" class="text-gray-600 hover:text-purple-600 transition">Problem</a>
+                    <a href="#solution" class="text-gray-600 hover:text-purple-600 transition">Solution</a>
+                    <a href="#benefits" class="text-gray-600 hover:text-purple-600 transition">Benefits</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-purple-600 transition">Testimonials</a>
+                    <a href="#contact" class="text-gray-600 hover:text-purple-600 transition">Contact</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#home" class="block py-2 text-gray-600 hover:text-purple-600">Home</a>
+                <a href="#problem" class="block py-2 text-gray-600 hover:text-purple-600">Problem</a>
+                <a href="#solution" class="block py-2 text-gray-600 hover:text-purple-600">Solution</a>
+                <a href="#benefits" class="block py-2 text-gray-600 hover:text-purple-600">Benefits</a>
+                <a href="#testimonials" class="block py-2 text-gray-600 hover:text-purple-600">Testimonials</a>
+                <a href="#contact" class="block py-2 text-gray-600 hover:text-purple-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-20 min-h-screen flex items-center bg-gradient-to-br from-purple-50 to-indigo-50">
+        <div class="container mx-auto px-4 py-16">
+            <div class="max-w-4xl mx-auto text-center animate-fade-in-up">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                    Transform Your Business Into a
+                    <span class="gradient-text">Client Magnet</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+                    Stop losing potential clients. Our proven conversion strategies turn website visitors into paying customers—guaranteed.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <button onclick="scrollToSection('contact')" class="hero-gradient text-white px-8 py-4 rounded-lg font-semibold text-lg hover-scale shadow-lg">
+                        Start Your Transformation
+                    </button>
+                    <button onclick="scrollToSection('testimonials')" class="bg-white text-purple-600 border-2 border-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover-scale">
+                        See Success Stories
+                    </button>
+                </div>
+                <div class="flex justify-center space-x-8 text-sm text-gray-500">
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        No Credit Card Required
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        30-Day Guarantee
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        Are You Leaving Money on the Table?
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Most businesses struggle to convert website visitors into clients. Here's the reality:
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center p-6 rounded-lg bg-red-50 border border-red-100">
+                        <div class="text-4xl font-bold text-red-600 mb-4">96%</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Visitors Leave Without Converting</h3>
+                        <p class="text-gray-600">Your website is attracting visitors, but they're not becoming clients.</p>
+                    </div>
+                    <div class="text-center p-6 rounded-lg bg-orange-50 border border-orange-100">
+                        <div class="text-4xl font-bold text-orange-600 mb-4">70%</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Lost to Competitors</h3>
+                        <p class="text-gray-600">Potential clients choose competitors who communicate value better.</p>
+                    </div>
+                    <div class="text-center p-6 rounded-lg bg-yellow-50 border border-yellow-100">
+                        <div class="text-4xl font-bold text-yellow-600 mb-4">$0</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">ROI from Poor Conversion</h3>
+                        <p class="text-gray-600">Without proper conversion optimization, your marketing budget goes to waste.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        Our Solution: <span class="gradient-text">Conversion Excellence</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        We transform your online presence into a client-generating machine with our proven framework.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Strategic Message Optimization</h3>
+                                    <p class="text-gray-600">Craft compelling messages that resonate with your ideal clients and drive action.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Conversion-Focused Design</h3>
+                                    <p class="text-gray-600">Create user experiences that guide visitors seamlessly from interest to action.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Data-Driven Optimization</h3>
+                                    <p class="text-gray-600">Continuously test and improve based on real user behavior and conversion data.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <div class="text-center mb-6">
+                            <div class="text-5xl font-bold gradient-text mb-2">327%</div>
+                            <p class="text-gray-600">Average Conversion Rate Increase</p>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Client Acquisition</span>
+                                <span class="text-green-600 font-semibold">+245%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Revenue Growth</span>
+                                <span class="text-green-600 font-semibold">+189%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Customer Lifetime Value</span>
+                                <span class="text-green-600 font-semibold">+156%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        Benefits That Transform Your Business
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Experience measurable results that impact your bottom line.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center p-6 rounded-lg hover-scale cursor-pointer">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Increased Revenue</h3>
+                        <p class="text-gray-600">Turn more visitors into paying customers and watch your revenue grow.</p>
+                    </div>
+                    
+                    <div class="text-center p-6 rounded-lg hover-scale cursor-pointer">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">More Clients</h3>
+                        <p class="text-gray-600">Build a steady stream of qualified clients ready to do business with you.</p>
+                    </div>
+                    
+                    <div class="text-center p-6 rounded-lg hover-scale cursor-pointer">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Better ROI</h3>
+                        <p class="text-gray-600">Maximize your marketing investment with higher conversion rates.</p>
+                    </div>
+                    
+                    <div class="text-center p-6 rounded-lg hover-scale cursor-pointer">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Competitive Edge</h3>
+                        <p class="text-gray-600">Stand out from competitors and become the obvious choice in your market.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        Success Stories From Real Clients
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        See how businesses like yours transformed their client acquisition.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover-scale">
+                        <div class="flex items-center mb-4">
+                            <img src="https://picsum.photos/seed/client1/60/60.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Sarah Johnson</h4>
+                                <p class="text-sm text-gray-600">CEO, TechStart Inc.</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-4">
+                            <span class="text-yellow-400">★★★★★</span>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "Our conversion rate went from 2% to 8% in just 60 days. The ROI has been incredible—we're now getting 4x more clients from the same traffic."
+                        </p>
+                        <div class="mt-4 text-sm text-green-600 font-semibold">
+                            Results: +300% Conversion Rate
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover-scale">
+                        <div class="flex items-center mb-4">
+                            <img src="https://picsum.photos/seed/client2/60/60.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Michael Chen</h4>
+                                <p class="text-sm text-gray-600">Founder, GrowthLab</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-4">
+                            <span class="text-yellow-400">★★★★★</span>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "I was skeptical at first, but the results speak for themselves. We've doubled our monthly revenue and our sales team has never been busier with qualified leads."
+                        </p>
+                        <div class="mt-4 text-sm text-green-600 font-semibold">
+                            Results: +200% Monthly Revenue
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover-scale">
+                        <div class="flex items-center mb-4">
+                            <img src="https://picsum.photos/seed/client3/60/60.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Emily Rodriguez</h4>
+                                <p class="text-sm text-gray-600">Marketing Director, ScaleUp Co.</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-4">
+                            <span class="text-yellow-400">★★★★★</span>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "The transformation has been remarkable. Our website now works 24/7 as our best salesperson. We've reduced our customer acquisition cost by 60%."
+                        </p>
+                        <div class="mt-4 text-sm text-green-600 font-semibold">
+                            Results: -60% Customer Acquisition Cost
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <div class="inline-flex items-center space-x-8 bg-white rounded-lg shadow-md px-8 py-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold gradient-text">500+</div>
+                            <p class="text-gray-600">Happy Clients</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold gradient-text">4.9/5</div>
+                            <p class="text-gray-600">Average Rating</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold gradient-text">$50M+</div>
+                            <p class="text-gray-600">Revenue Generated</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-20 hero-gradient text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Ready to Transform Your Business?
+                </h2>
+                <p class="text-xl mb-8 opacity-90">
+                    Join hundreds of successful businesses that have turned their website into a client-generating machine.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="scrollToSection('contact')" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover-scale shadow-lg">
+                        Get Started Today
+                    </button>
+                    <button onclick="scrollToSection('testimonials')" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover-scale">
+                        View More Results
+                    </button>
+                </div>
+                <div class="mt-8 text-sm opacity-75">
+                    <p>✓ No long-term contracts ✓ 30-day money-back guarantee ✓ Free consultation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        Start Your Transformation Today
+                    </h2>
+                    <p class="text-xl text-gray-600">
+                        Fill out the form below and we'll contact you within 24 hours.
+                    </p>
+                </div>
+                
+                <form id="contactForm" class="bg-gray-50 rounded-2xl p-8 shadow-lg">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    </div>
+                    
+                    <div class="mt-6">
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    </div>
+                    
+                    <div class="mt-6">
+                        <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company Name *</label>
+                        <input type="text" id="company" name="company" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    </div>
+                    
+                    <div class="mt-6">
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Tell us about your goals *</label>
+                        <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent"></textarea>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <button type="submit" class="w-full hero-gradient text-white px-8 py-4 rounded-lg font-semibold text-lg hover-scale shadow-lg">
+                            Submit Request
+                        </button>
+                    </div>
+                    
+                    <div class="mt-4 text-center text-sm text-gray-600">
+                        <p>We respect your privacy. Your information will never be shared with third parties.</p>
+                    </div>
+                </form>
+                
+                <div id="successMessage" class="hidden mt-8 bg-green-50 border border-green-200 rounded-lg p-6 text-center">
+                    <div class="text-green-600 text-xl font-semibold mb-2">Thank You!</div>
+                    <p class="text-gray-700">We've received your request and will contact you within 24 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold gradient-text mb-4">YourBrand</h3>
+                        <p class="text-gray-400">Transforming businesses into client magnets through proven conversion strategies.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="#home" class="hover:text-white transition">Home</a></li>
+                            <li><a href="#problem" class="hover:text-white transition">Problem</a></li>
+                            <li><a href="#solution" class="hover:text-white transition">Solution</a></li>
+                            <li><a href="#benefits" class="hover:text-white transition">Benefits</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Support</h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="#testimonials" class="hover:text-white transition">Testimonials</a></li>
+                            <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+                            <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Contact Info</h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <li>info@yourbrand.com</li>
+                            <li>+1 (555) 123-4567</li>
+                            <li>Mon-Fri: 9AM-6PM EST</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                    <p>&copy; 2024 YourBrand. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scroll to section
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+                // Close mobile menu if open
+                document.getElementById('mobileMenu').classList.add('hidden');
+            }
+        }
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            
+            // Simulate form submission (in production, this would send to a server)
+            console.log('Form submitted:', data);
+            
+            // Show success message
+            document.getElementById('successMessage').classList.remove('hidden');
+            
+            // Reset form
+            this.reset();
+            
+            // Scroll to success message
+            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+            
+            // Hide success message after 10 seconds
+            setTimeout(() => {
+                document.getElementById('successMessage').classList.add('hidden');
+            }, 10000);
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
